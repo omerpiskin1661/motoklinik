@@ -1,52 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Price List</title>
+    <title>Motoklinik - Ömer Pişkin</title>
     <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 600px;
+        }
+        img {
+            width: 100px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        h1 { margin: 15px 0 5px; font-size: 24px; }
+        .subtitle { margin-bottom: 20px; opacity: 0.9; font-size: 16px; }
+        
+        .contact-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid white;
+        }
+        
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .links a {
+            background: white;
+            color: #764ba2;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: transform 0.2s;
+            font-size: 14px;
+        }
+        .links a:hover { transform: scale(1.05); }
+        
+        .price-section {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .price-section h2 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            overflow: hidden;
         }
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border: 1px solid #dddddd;
+        thead {
+            background: rgba(255, 255, 255, 0.25);
         }
         th {
-            background-color: #f2f2f2;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            border-bottom: 2px solid white;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .price {
+            text-align: right;
+            font-weight: bold;
+            color: #ffd700;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <h1>Price List</h1>
-    <table>
-        <tr>
-            <th>Service</th>
-            <th>Price</th>
-        </tr>
-        <tr>
-            <td>Lastik Şişirme</td>
-            <td>10₺</td>
-        </tr>
-        <tr>
-            <td>Yağ Değişimi</td>
-            <td>400₺</td>
-        </tr>
-        <tr>
-            <td>Motul Yağ Değişimi</td>
-            <td>800₺</td>
-        </tr>
-        <tr>
-            <td>Şamyel Değişim</td>
-            <td>500₺</td>
-        </tr>
-        <tr>
-            <td>Lastik Yama</td>
-            <td>200₺</td>
-        </tr>
-    </table>
+    <div class="container">
+        <img src="https://via.placeholder.com/100" alt="Profil">
+        <h1>🏍️ Motoklinik</h1>
+        <p class="subtitle">Ömer Pişkin</p>
+        
+        <div class="contact-section">
+            <div class="links">
+                <a href="https://instagram.com/ome_rpskn.16">📱 Instagram</a>
+                <a href="https://wa.me/905516477323">💬 WhatsApp</a>
+                <a href="mailto:omerpiskin1600@gmail.com">📧 E-posta</a>
+            </div>
+        </div>
+
+        <div class="price-section">
+            <h2>💰 Fiyat Listesi</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hizmet</th>
+                        <th class="price">Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🎯 Lastik Şişirme</td>
+                        <td class="price">10₺</td>
+                    </tr>
+                    <tr>
+                        <td>🛢️ Yağ Değişimi</td>
+                        <td class="price">400₺</td>
+                    </tr>
+                    <tr>
+                        <td>🏆 Motul Yağ Değişimi</td>
+                        <td class="price">800₺</td>
+                    </tr>
+                    <tr>
+                        <td>🧹 Şamyel Değişim</td>
+                        <td class="price">500₺</td>
+                    </tr>
+                    <tr>
+                        <td>🩹 Lastik Yama</td>
+                        <td class="price">200₺</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
